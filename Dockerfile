@@ -2,9 +2,10 @@
 FROM python:3.10-slim
 
 # ffmpeg এবং অন্যান্য প্রয়োজনীয় সিস্টেম লাইব্রেরি ইন্সটল করুন
+# *** দ্রষ্টব্য: এখানে libgl1-mesa-glx কে libgl1 দিয়ে পরিবর্তন করা হয়েছে ***
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ffmpeg \
-    libgl1-mesa-glx \
+    libgl1 \
     libglib2.0-0 \
     git \
     curl \
